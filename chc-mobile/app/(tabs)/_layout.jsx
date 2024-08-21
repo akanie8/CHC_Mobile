@@ -3,7 +3,6 @@ import React from 'react'
 import {Tabs} from 'expo-router'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import AntDesign from '@expo/vector-icons/AntDesign';
 const TabLayout = () => {
   return (
    <Tabs screenOptions={{headerShown: false}}>
@@ -22,7 +21,7 @@ const TabLayout = () => {
       <Tabs.Screen name='profile' 
         options={{
           tabBarLabel: "Profile",
-          tabBarIcon: ({color}) => <AntDesign name="profile" size={24} color={color} />
+          tabBarIcon: ({color}) => <MaterialIcons name="account-circle" size={24} color={color} />
         }}
       />
      
