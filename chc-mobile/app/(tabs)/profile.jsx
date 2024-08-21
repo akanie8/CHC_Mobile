@@ -1,10 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function profile() {
   return (
-    <View>
-      <Text>profile</Text>
-    </View>
+    <SafeAreaView>
+      <Text style={{fontSize: 20, fontFamily: 'Oswald'}}>profile</Text>
+    </SafeAreaView>
   )
 }
