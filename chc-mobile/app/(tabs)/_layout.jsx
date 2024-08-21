@@ -3,9 +3,12 @@ import React from 'react'
 import {Tabs} from 'expo-router'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import {Colors} from './../../constants/Colors';
 const TabLayout = () => {
   return (
-   <Tabs screenOptions={{headerShown: false}}>
+   <Tabs screenOptions={{headerShown: false, 
+        tabBarActiveTintColor: Colors.PRIMARY
+   }}>
       <Tabs.Screen name='home' 
         options={{
           tabBarLabel: 'Home',
