@@ -1,11 +1,19 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import Header from '../../components/Home/Header'
 
 const home = () => {
   return (
     <SafeAreaView>
-      <Text style={{fontSize: 20, fontFamily: 'Oswald'}}>home</Text>
+      {/* Header */}
+        <Header/>
+      {/* Slider */}
+
+      {/* Upcoming Events */}
+
+      {/* Booked event */}
+
     </SafeAreaView>
   )
 }
