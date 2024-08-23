@@ -6,7 +6,8 @@ export default function RootLayout() {
 
   useFonts({
     'DMSerifText': require('./../assets/fonts/DMSerifText-Italic.ttf'),
-    'Oswald': require('./../assets/fonts/Oswald-SemiBold.ttf')
+    'Oswald': require('./../assets/fonts/Oswald-SemiBold.ttf'),
+    'SpaceMono': require('./../assets/fonts/SpaceMono-Regular.ttf')
   })
   return (
     <ClerkProvider publishableKey={process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY}>
