@@ -1,7 +1,8 @@
-import { View, Text , Image} from 'react-native'
+import { View, Text , Image, TextInput} from 'react-native'
 import React from 'react'
 import {useUser} from '@clerk/clerk-expo'
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Colors } from '../../constants/Colors';
+import EvilIcons from '@expo/vector-icons/EvilIcons';
 export default function Header() {
 
     const {user} = useUser();
@@ -10,10 +11,20 @@ export default function Header() {
     
         style={{
             padding: 20,
-            paddingTop: 40
+            paddingTop: 40,
+            backgroundColor: "skyblue",
+            borderBottomLeftRadius: 15,
+            borderBottomRightRadius: 15,
+            
         }}
     >
-        <View>
+        <View style={{
+
+            display:'flex',
+            flexDirection: 'row',
+            alignItems: 'centre',
+            gap: 10,
+        }}>
             <Image source={{uri:user?.imageUrl}}
                 style={{
                     width: 45,
@@ -22,6 +33,40 @@ export default function Header() {
 
                 }}
             />
+            <View
+                style={{
+                    marginTop: 5
+                }}
+            >
+                <Text style={{
+                    opacity: 1,
+                    color: 'navy',
+                    fontFamily: 'DMSerifText',
+            
+                }}>Welcome</Text>
+                <Text
+                    style={{
+                        fontFamily: 'Oswald',
+                        fontSize: 15,
+                        shadowOpacity: 0.3,
+                    
+                    }}
+                >{user?.fullName}</Text>
+            </View>
+        </View>
+        {/* Seearch bar section */}
+        <View style={{
+            display: 'flex',
+            flexDirection: 'row',
+            gap: 5,
+            alignItems: 'center',
+            backgroundColor: 'white',
+            padding: 5,
+            marginTop: 15,
+            borderRadius: 20
+        }}>
+        <EvilIcons name="search" size={24} color={Colors.PRIMARY} />
+        <TextInput placeholder='Search something....'></TextInput>
         </View>
     </View>
   )

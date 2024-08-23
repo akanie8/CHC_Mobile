@@ -5,7 +5,7 @@ import Header from '../../components/Home/Header'
 
 const home = () => {
   return (
-    <SafeAreaView>
+    <View>
       {/* Header */}
         <Header/>
       {/* Slider */}
@@ -14,7 +14,9 @@ const home = () => {
 
       {/* Booked event */}
 
-    </SafeAreaView>
+      {/* Search */}
+
+    </View>
   )
 }
 
