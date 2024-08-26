@@ -13,8 +13,9 @@ export default function Header() {
             padding: 20,
             paddingTop: 40,
             backgroundColor: "skyblue",
-            borderBottomLeftRadius: 15,
-            borderBottomRightRadius: 15,
+            borderBottomLeftRadius: 8,
+            borderBottomRightRadius: 8,
+            
             
         }}
     >
@@ -63,7 +64,9 @@ export default function Header() {
             backgroundColor: 'white',
             padding: 5,
             marginTop: 15,
-            borderRadius: 20
+            borderRadius: 20,
+            shadowOffset: 0.5,
+            shadowOpacity: 0.4
         }}>
         <EvilIcons name="search" size={24} color={Colors.PRIMARY} />
         <TextInput placeholder='Search something....'></TextInput>
